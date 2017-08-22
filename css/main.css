@@ -1005,15 +1005,17 @@ fieldset[disabled] .btn-link:hover {
     .main-header .brand-logo .logo-icon {
       position: absolute;
       background-color: black;
-      padding: 10px;
+      padding: 14px 18px;
       z-index: 10;
       top: 0; }
       .main-header .brand-logo .logo-icon img {
-        width: 50px; }
+        width: 45px; }
     .main-header .brand-logo .logo-title {
-      position: relative; }
+      position: relative;
+      margin-left: 100px;
+      top: 12px; }
       .main-header .brand-logo .logo-title img {
-        width: 50px; }
+        width: 145px; }
   .main-header .header-inner {
     max-width: 90%;
     margin: 0 auto; }
