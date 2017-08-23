@@ -23,24 +23,24 @@
 // =========================================
 
 // 主要顏色
-$primary-color:#C82639;
+$primary-color:#ffc82c;
 
 
 // =========================================
 // UI主要按鈕樣式
 // =========================================
 
-$link: #C82639; // 連結
+$link: #000; // 連結
 
 $primary: #fff;
-$primary-bg: #C82639;
-$primary-border: #C82639;
-$primary-darken: #961423; // 紅框預設按鈕
+$primary-bg: #ffc82c;
+$primary-border: #ffc82c;
+$primary-darken: #D89B0D; // 紅框預設按鈕
 
-$default: #C82639;
+$default: #ffc82c;
 $default-bg: transparent;
-$default-border: #C82639;
-$default-darken: #961423; // 灰框按鈕
+$default-border: #ffc82c;
+$default-darken: #ffc82c; // 灰框按鈕
 
 $info: #5E5E5E;
 $info-bg: transparent;
@@ -57,9 +57,9 @@ $inverse-bg: #3B3B3B;
 $inverse-border: #3B3B3B;
 $inverse-darken: #1F1F1F;
 
-$warning: #C82639; // 白框按鈕
-$danger: #C82639;
-$success: #C82639;
+$warning: #ffc82c; // 白框按鈕
+$danger: #ffc82c;
+$success: #ffc82c;
 
 // =========================================
 // Label 顏色

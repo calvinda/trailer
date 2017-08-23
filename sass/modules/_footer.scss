@@ -1,39 +1,62 @@
-footer{
+footer {}
 
-}
-
-.bottom-service-info{
+.bottom-service-info {
     background-color: #333333;
-    padding: 20px 0;
-    
-    .bottom-info-content{
+    padding: 70px 0;
+    .bottom-info-content {
         text-align: center;
-        span{
+        span {
             display: block;
             color: #ddd;
             font-weight: 400;
+            font-size: 16px;
         }
     }
 }
 
-.footer-info{
-    background-color: #1f1f1f;
+.footer-info {
+    background-color: #222222;
     min-height: 100px;
     padding: 0 30px 50px;
-
-    h3{
+    h3 {
         margin: 70px 0 50px;
-        color:white;
+        color: white;
     }
-    .client-list{
+    .client-list {
         margin-top: 50px;
         text-align: center;
-        span{
+        span {
             max-width: 100px;
             display: inline-block;
-            img{
+            margin: 0 10px;
+            img {
                 width: 100%;
             }
         }
+    }
+    .bottom-menu {
+        display: inline-block;
+        margin-top: 35px;
+        li {
+            float: left;
+            margin: 0 15px;
+            a {
+                color: $primary-color;
+                font-weight: bold;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .footer-logo{
+        width: 255px;
+        margin-top: 35px;
+    }
+    .footer-copyright{
+        color: white;
+        font-size: 12px;
+        display: block;
+        margin-top: 23px;
+        font-weight: 400;
     }
 }
