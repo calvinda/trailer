@@ -1,0 +1,39 @@
+footer{
+
+}
+
+.bottom-service-info{
+    background-color: #333333;
+    padding: 20px 0;
+    
+    .bottom-info-content{
+        text-align: center;
+        span{
+            display: block;
+            color: #ddd;
+            font-weight: 400;
+        }
+    }
+}
+
+.footer-info{
+    background-color: #1f1f1f;
+    min-height: 100px;
+    padding: 0 30px 50px;
+
+    h3{
+        margin: 70px 0 50px;
+        color:white;
+    }
+    .client-list{
+        margin-top: 50px;
+        text-align: center;
+        span{
+            max-width: 100px;
+            display: inline-block;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

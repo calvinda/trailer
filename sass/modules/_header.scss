@@ -1,44 +1,145 @@
-.main-header{
+.main-metabar {
+    position: fixed;
     background-color: #ffc82c;
     height: 50px;
-
-    .brand-logo{
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    .brand-logo {
         position: relative;
-        .logo-icon{
+        .logo-icon {
             position: absolute;
             background-color: black;
             padding: 14px 18px;
             z-index: 10;
             top: 0;
-            img{
+            img {
                 width: 45px;
             }
         }
-        .logo-title{
+        .logo-title {
             position: relative;
             margin-left: 100px;
             top: 12px;
-            img{
+            img {
                 width: 145px;
+            }
+            @media(--desktop){
+                display: none;
+            }
+            @media(--pad){
+                display: none;
             }
         }
     }
-
-    .header-inner{
+    .metabar-inner {
         max-width: 90%;
         margin: 0 auto;
+        .is-show-bg {
+            position: static;
+            text-align: center;
+        }
     }
-
-    .main-menu{
-        li{
+    .main-menu {
+        display: inline-block;
+        li {
             float: left;
-            padding: 10px 0;
-            margin: 0 20px;
-            a{
+            padding: 13px 0 10px;
+            margin: 0 16px;
+            @media(--desktop){
+                margin: 0 9px;
+            }
+            @media(--pad){
+                margin: 0 5px;
+            }
+            a {
                 color: black;
                 font-weight: bold;
                 font-size: 16px;
             }
+            .sub-menu-bg {
+                display: none;
+                background-color: #222;
+                padding: 12px 0px;
+                position: absolute;
+                right: 0;
+                left: 0;
+                top: 50px;
+                .sub-menu {
+                    a {
+                        color: white;
+                        display: inline-block;
+                        margin: 0px 25px;
+                        @media(--l-desktop){
+                            margin: 0px 40px;
+                        }
+                        span {
+                            display: block;
+                        }
+                        &:hover{
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+            &.active {
+                .sub-menu-bg {
+                    display: block;
+                }
+                border-bottom: 3px solid black;
+            }
+        }
+    }
+    .metabar-fn {
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 2px;
+        @media(--pad){
+            margin-top: 10px;
+        }
+        span {
+            margin-right: 15px;
+            i {
+                color: black;
+                font-size: 32px;
+                position: relative;
+                top: 5px;
+                cursor: pointer;
+                @media(--pad){
+                    font-size: 22px;
+                }
+            }
+            .fa-phone {
+                position: relative;
+                top: 10px;
+                @media(--pad){
+                    top: 4px;
+                }
+            }
+            .fa-shopping-cart {
+                right: 5px;
+                @media(--pad){
+                    top: 3px;
+                }
+            }
+            .fa-search {
+                font-size: 26px;
+                position: relative;
+                top: 2px;
+                @media(--pad){
+                    font-size: 20px;
+                    top: 3px;
+                }
+            }
+            @media(--pad){
+             b{
+                 display: none;
+             }
+            }
+        }
+        a {
+            color: black;
         }
     }
 }
