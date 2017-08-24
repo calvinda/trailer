@@ -1165,6 +1165,135 @@ fieldset[disabled] .btn-link:hover {
 .full-section {
   min-height: 50px; }
 
-.landing-section-1 {
+.landing-section {
   background-size: cover;
-  height: 620px; }
+  height: 620px;
+  -webkit-box-shadow: 0px 0px 20px 0px #1f1f1f;
+          box-shadow: 0px 0px 20px 0px #1f1f1f;
+  position: relative;
+  color: white; }
+  .landing-section .section-title {
+    font-size: 65px; }
+  .landing-section .section-subtitle {
+    font-size: 25px;
+    line-height: 35px; }
+  .landing-section .btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-right: 10px; }
+  .landing-section .btn-primary {
+    color: black; }
+
+.landing-section-1 {
+  z-index: 5; }
+  .landing-section-1 .section-content {
+    margin-top: 16%; }
+
+.landing-section-2 {
+  z-index: 4; }
+  .landing-section-2 .section-content {
+    margin-top: 13%;
+    color: black; }
+
+.landing-section-3 {
+  z-index: 3; }
+  .landing-section-3 .section-content {
+    margin-top: 13%;
+    color: black; }
+
+.landing-section-4 {
+  z-index: 2; }
+  .landing-section-4 .section-content {
+    margin-top: 13%; }
+
+.landing-section-5 {
+  z-index: 1;
+  color: white;
+  text-align: center; }
+  .landing-section-5 .section-content {
+    margin-top: 6%; }
+    .landing-section-5 .section-content .section-content-block {
+      margin: 50px 0 90px; }
+      .landing-section-5 .section-content .section-content-block .section-content-item {
+        display: inline-block;
+        font-size: 20px;
+        width: 200px;
+        line-height: 25px; }
+
+.landing-section-6 {
+  z-index: 0; }
+  .landing-section-6 h2 {
+    margin: 0; }
+  .landing-section-6 .section-content-block {
+    font-size: 0;
+    height: 100%;
+    background-color: black;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .landing-section-6 .section-content-block .section-content-item {
+      background-size: cover;
+      display: inline-block;
+      height: 100%; }
+      .landing-section-6 .section-content-block .section-content-item .section-content {
+        margin-top: 25%; }
+        .landing-section-6 .section-content-block .section-content-item .section-content .section-title {
+          font-size: 60px; }
+          .landing-section-6 .section-content-block .section-content-item .section-content .section-title:after {
+            content: '';
+            width: 55px;
+            border-bottom: 5px solid #ffc82c;
+            display: block;
+            margin: 15px 0; }
+        .landing-section-6 .section-content-block .section-content-item .section-content .section-subtitle {
+          font-size: 23px; }
+
+.accessories-section {
+  height: auto; }
+  .accessories-section .section-block {
+    background-size: cover; }
+  .accessories-section .section-title {
+    display: inline-block;
+    font-size: 65px;
+    width: 50%; }
+  .accessories-section .btn {
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    font-size: 18px; }
+    .accessories-section .btn i {
+      margin-left: 5px; }
+
+.accessories-section-1 {
+  text-align: center;
+  height: 480px; }
+  .accessories-section-1 .section-title {
+    margin: 13% auto 0; }
+
+.accessories-section-2 {
+  padding: 70px 0 30px; }
+  .accessories-section-2 .section-block {
+    height: 620px; }
+    .accessories-section-2 .section-block .section-content {
+      margin-top: 10%; }
+  .accessories-section-2 .section-block-t {
+    margin-bottom: 30px; }
+  .accessories-section-2 .section-block-l {
+    margin-right: 0;
+    height: 760px; }
+  .accessories-section-2 .section-block-r {
+    height: 760px;
+    margin-left: 0;
+    color: #f9cd12; }
+    .accessories-section-2 .section-block-r .section-content {
+      margin-top: 0%;
+      text-align: center; }
+      .accessories-section-2 .section-block-r .section-content .section-title {
+        text-align: left; }
+    .accessories-section-2 .section-block-r .section-block-r-t {
+      height: 40%; }
+      .accessories-section-2 .section-block-r .section-block-r-t .section-title {
+        width: 75%; }
+    .accessories-section-2 .section-block-r .section-block-r-b {
+      height: 60%; }

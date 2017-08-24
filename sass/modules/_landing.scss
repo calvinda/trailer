@@ -1,9 +1,103 @@
-.full-section{
+.full-section {
     min-height: 50px;
 }
 
 //首頁 The best jack on the planet
-.landing-section-1{
+.landing-section {
     background-size: cover;
     height: 620px;
+    box-shadow: 0px 0px 20px 0px #1f1f1f;
+    position: relative;
+    color: white;
+    .section-title {
+        font-size: 65px;
+    }
+    .section-subtitle {
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .btn {
+        border-radius: 20px;
+        padding: 10px 20px;
+        margin-right: 10px;
+    }
+    .btn-primary {
+        color: black;
+    }
+}
+.landing-section-1 {
+    z-index: 5;
+    .section-content {
+        margin-top: 16%;
+    }
+}
+.landing-section-2 {
+    z-index: 4;
+    .section-content {
+        margin-top: 13%;
+        color: black;
+    }
+}
+.landing-section-3 {
+    z-index: 3;
+    .section-content {
+        margin-top: 13%;
+        color: black;
+    }
+}
+.landing-section-4 {
+    z-index: 2;
+    .section-content {
+        margin-top: 13%;
+    }
+}
+.landing-section-5 {
+    z-index: 1;
+    color: white;
+    text-align: center;
+    .section-content {
+        margin-top: 6%;
+        .section-content-block {
+            margin: 50px 0 90px;
+            .section-content-item {
+                display: inline-block;
+                font-size: 20px;
+                width: 200px;
+                line-height: 25px;
+            }
+        }
+    }
+}
+.landing-section-6 {
+    z-index: 0;
+    h2 {
+        margin: 0;
+    }
+    .section-content-block {
+        font-size: 0;
+        height: 100%;
+        background-color: black;
+        display: flex;
+        .section-content-item {
+            background-size: cover;
+            display: inline-block;
+            height: 100%;
+            .section-content {
+                margin-top: 25%;
+                .section-title {
+                    font-size: 60px;
+                    &:after {
+                        content: '';
+                        width: 55px;
+                        border-bottom: 5px solid #ffc82c;
+                        display: block;
+                        margin: 15px 0;
+                    }
+                }
+                .section-subtitle {
+                    font-size: 23px;
+                }
+            }
+        }
+    }
 }
