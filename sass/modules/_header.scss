@@ -95,6 +95,7 @@
         font-size: 14px;
         font-weight: bold;
         margin-top: 2px;
+        color:black;
         @media(--pad){
             margin-top: 10px;
         }
@@ -112,7 +113,7 @@
             }
             .fa-phone {
                 position: relative;
-                top: 10px;
+                top: 8px;
                 @media(--pad){
                     top: 4px;
                 }

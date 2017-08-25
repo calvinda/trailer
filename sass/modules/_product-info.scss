@@ -1,0 +1,131 @@
+.active-link {
+    color: $primary-color;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.label-title {
+    color: $primary-color;
+    font-weight: 400;
+    display: inline-block;
+    font-size: 25px;
+    border-bottom: 3px solid $primary-color;
+    padding-bottom: 6px;
+}
+
+.features {
+    max-width: 500px;
+    margin: 30px auto 20px;
+    text-align: center;
+    .feature-item {
+        span {
+            display: block;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.product-info-section-1 {
+    background-size: cover;
+    position: relative;
+    color: white;
+    margin-top: 30px;
+    padding-bottom: 40px;
+    .section-content {
+        h2 {
+            margin-top: 120px;
+            font-size: 60px;
+        }
+        .buy-btn-block {
+            background-color: $primary-color;
+            padding: 6px;
+            width: 315px;
+            margin-top: 10px;
+            display: inline-block;
+            text-align: center;
+            font-weight: bold;
+            color: black;
+            font-size: 14px;
+            &:hover {
+                background-color: $primary-darken;
+            }
+        }
+        .play-btn {
+            display: block;
+            margin-top: 50px;
+        }
+        .section-description {
+            color: white;
+            width: 61%;
+            font-weight: 300;
+            margin: 180px auto 0;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 1.5px;
+        }
+        .active-link {
+            margin-top: 70px;
+        }
+    }
+}
+
+.product-info-section-2 {
+    background-size: cover;
+    position: relative;
+    color: white;
+    padding-top: 94px;
+    padding-bottom: 40px;
+    min-height: 550px;
+    .section-content {
+        h2 {
+            margin-top: 30px;
+            font-size: 60px;
+        }
+    }
+
+    .active-link {
+        margin-top: 20px;
+    }
+}
+
+.product-info-section-3{
+    background-size: cover;
+    position: relative;
+    color: white;
+    padding-top: 130px;
+    min-height: 550px;
+    h2 {
+        margin-top: 30px;
+        font-size: 60px;
+    }
+}
+
+.product-info-section-4{
+    background-size: cover;
+    position: relative;
+    color: white;
+    padding-top: 130px;
+    min-height: 550px;
+    h2 {
+        margin-top: 30px;
+        font-size: 60px;
+    }
+
+    .features {
+        max-width: 780px;
+        margin: 55px auto 20px;
+        text-align: center;
+        .feature-item {
+            span {
+                display: block;
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+}
+
