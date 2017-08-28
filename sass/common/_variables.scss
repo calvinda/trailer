@@ -13,6 +13,7 @@
 // @custom-media --l-desktop (min-width: 1200px);
 @custom-media --mobile (max-width: 767px );
 @custom-media --pad (min-width: 768px) and (max-width:991px);
+@custom-media --pad-land (min-width: 768px) and (orientation: landscape);
 @custom-media --desktop (min-width: 992px) and (max-width:1199px);
 @custom-media --l-desktop (min-width: 1200px);
 
