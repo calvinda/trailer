@@ -17,12 +17,11 @@
             img {
                 width: 45px;
             }
-            @media (--mobile){
+            @media (--mobile) {
                 padding: 10px 15px;
-                
-                img{
-                    width: 33px;
 
+                img {
+                    width: 33px;
                 }
             }
         }
@@ -33,13 +32,13 @@
             img {
                 width: 145px;
             }
-            @media(--desktop){
+            @media (--desktop) {
                 display: none;
             }
-            @media(--pad){
+            @media (--pad) {
                 display: none;
             }
-            @media (--mobile){
+            @media (--mobile) {
                 display: inline-block;
                 margin-left: 70px;
             }
@@ -52,27 +51,55 @@
             position: static;
             text-align: center;
         }
-        
+    }
+    .main-metabar-nav-bar {
+        position: absolute;
+        right: 0;
+        top: 10px;
+    }
+    .main-menu-wrapper {
+        @media (--mobile) {
+            display: none;
+            background-color: #ffc82c;
+            z-index: 99999999999;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            width: 200px;
+            box-shadow: 5px 0px 20px 0px black;
+            &.active {
+                display: block;
+            }
+        }
+        .main-menu-wrapper-close-block {
+            text-align: right;
+            margin: 10px 0 20px;
+        }
     }
     .main-menu {
         display: inline-block;
-        @media (--mobile){
-            display: none;
+        @media (--mobile) {
+            display: block;
         }
         li {
             float: left;
             padding: 13px 0 10px;
             margin: 0 16px;
-            @media(--desktop){
+            @media (--desktop) {
                 margin: 0 9px;
             }
-            @media(--pad){
-                margin: 0 5px;
+            @media (--pad) {
+                margin: 0 4px;
+            }
+            @media (--mobile) {
+                float: none;
+                text-align: left;
             }
             a {
                 color: black;
-                font-weight: bold;
-                font-size: 16px;
+                font-size: 21px;
+                letter-spacing: 1px;
             }
             .sub-menu-bg {
                 display: none;
@@ -87,13 +114,14 @@
                         color: white;
                         display: inline-block;
                         margin: 0px 25px;
-                        @media(--l-desktop){
+                        font-size: 14px;
+                        @media (--l-desktop) {
                             margin: 0px 40px;
                         }
                         span {
                             display: block;
                         }
-                        &:hover{
+                        &:hover {
                             opacity: 0.7;
                         }
                     }
@@ -111,35 +139,44 @@
         font-size: 14px;
         font-weight: bold;
         margin-top: 2px;
-        color:black;
-        @media (--mobile){
-            display: none;
-        }
-        @media(--pad){
+        color: black;
+        @media (--pad) {
             margin-top: 10px;
         }
-        span {
+        @media (--mobile) {
+            border-top: 1px solid black;
+        }
+        .metabar-fn-li {
             margin-right: 15px;
+            font-size: 18px;
+            a {
+                font-size: 18px;
+            }
+            @media (--mobile) {
+                display: block;
+                margin: 16px;
+            }
             i {
                 color: black;
                 font-size: 32px;
                 position: relative;
                 top: 5px;
                 cursor: pointer;
-                @media(--pad){
+                margin-right: 5px;
+                @media (--pad) {
                     font-size: 22px;
                 }
             }
             .fa-phone {
                 position: relative;
                 top: 8px;
-                @media(--pad){
+                @media (--pad) {
                     top: 4px;
                 }
             }
             .fa-shopping-cart {
                 right: 5px;
-                @media(--pad){
+                @media (--pad) {
                     top: 3px;
                 }
             }
@@ -147,15 +184,15 @@
                 font-size: 26px;
                 position: relative;
                 top: 2px;
-                @media(--pad){
+                @media (--pad) {
                     font-size: 20px;
                     top: 3px;
                 }
             }
-            @media(--pad){
-             b{
-                 display: none;
-             }
+            @media (--pad) {
+                b {
+                    display: none;
+                }
             }
         }
         a {

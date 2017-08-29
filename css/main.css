@@ -9,15 +9,21 @@
 /*
     base
 */
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../fonts/BebasNeue.eot");
+  src: url("../fonts/BebasNeue.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue.woff") format("woff"), url("../fonts/BebasNeue.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
 body,
 html {
   margin: 0;
   padding: 0;
-  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-family: "Helvetica Neue", "微軟正黑體", "Arial", sans-serif;
   letter-spacing: 0px;
   font-size: 14px;
   line-height: 1.65em;
-  font-weight: 300;
   overflow-wrap: break-word;
   word-wrap: break-word; }
 
@@ -36,6 +42,17 @@ button {
 
 a:hover {
   text-decoration: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.theme-font {
+  font-family: "Bebas Neue"; }
+
+.normal-font {
+  font-family: "Helvetica Neue", "微軟正黑體", "Arial", sans-serif; }
 
 .btn {
   border: 1px solid;
@@ -1041,11 +1058,32 @@ fieldset[disabled] .btn-link:hover {
     .main-metabar .metabar-inner .is-show-bg {
       position: static;
       text-align: center; }
+  .main-metabar .main-metabar-nav-bar {
+    position: absolute;
+    right: 0;
+    top: 10px; }
+  @media (max-width: 767px ) {
+    .main-metabar .main-menu-wrapper {
+      display: none;
+      background-color: #ffc82c;
+      z-index: 99999999999;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 200px;
+      -webkit-box-shadow: 5px 0px 20px 0px black;
+              box-shadow: 5px 0px 20px 0px black; }
+      .main-metabar .main-menu-wrapper.active {
+        display: block; } }
+  .main-metabar .main-menu-wrapper .main-menu-wrapper-close-block {
+    text-align: right;
+    margin: 10px 0 20px; }
   .main-metabar .main-menu {
     display: inline-block; }
     @media (max-width: 767px ) {
       .main-metabar .main-menu {
-        display: none; } }
+        display: block; } }
     .main-metabar .main-menu li {
       float: left;
       padding: 13px 0 10px;
@@ -1055,11 +1093,15 @@ fieldset[disabled] .btn-link:hover {
           margin: 0 9px; } }
       @media (min-width: 768px) and (max-width:991px) {
         .main-metabar .main-menu li {
-          margin: 0 5px; } }
+          margin: 0 4px; } }
+      @media (max-width: 767px ) {
+        .main-metabar .main-menu li {
+          float: none;
+          text-align: left; } }
       .main-metabar .main-menu li a {
         color: black;
-        font-weight: bold;
-        font-size: 16px; }
+        font-size: 21px;
+        letter-spacing: 1px; }
       .main-metabar .main-menu li .sub-menu-bg {
         display: none;
         background-color: #222;
@@ -1071,7 +1113,8 @@ fieldset[disabled] .btn-link:hover {
         .main-metabar .main-menu li .sub-menu-bg .sub-menu a {
           color: white;
           display: inline-block;
-          margin: 0px 25px; }
+          margin: 0px 25px;
+          font-size: 14px; }
           @media (min-width: 1200px) {
             .main-metabar .main-menu li .sub-menu-bg .sub-menu a {
               margin: 0px 40px; } }
@@ -1088,44 +1131,52 @@ fieldset[disabled] .btn-link:hover {
     font-weight: bold;
     margin-top: 2px;
     color: black; }
-    @media (max-width: 767px ) {
-      .main-metabar .metabar-fn {
-        display: none; } }
     @media (min-width: 768px) and (max-width:991px) {
       .main-metabar .metabar-fn {
         margin-top: 10px; } }
-    .main-metabar .metabar-fn span {
-      margin-right: 15px; }
-      .main-metabar .metabar-fn span i {
+    @media (max-width: 767px ) {
+      .main-metabar .metabar-fn {
+        border-top: 1px solid black; } }
+    .main-metabar .metabar-fn .metabar-fn-li {
+      margin-right: 15px;
+      font-size: 18px; }
+      .main-metabar .metabar-fn .metabar-fn-li a {
+        font-size: 18px; }
+      @media (max-width: 767px ) {
+        .main-metabar .metabar-fn .metabar-fn-li {
+          display: block;
+          margin: 16px; } }
+      .main-metabar .metabar-fn .metabar-fn-li i {
         color: black;
         font-size: 32px;
         position: relative;
         top: 5px;
-        cursor: pointer; }
+        cursor: pointer;
+        margin-right: 5px; }
         @media (min-width: 768px) and (max-width:991px) {
-          .main-metabar .metabar-fn span i {
+          .main-metabar .metabar-fn .metabar-fn-li i {
             font-size: 22px; } }
-      .main-metabar .metabar-fn span .fa-phone {
+      .main-metabar .metabar-fn .metabar-fn-li .fa-phone {
         position: relative;
         top: 8px; }
         @media (min-width: 768px) and (max-width:991px) {
-          .main-metabar .metabar-fn span .fa-phone {
+          .main-metabar .metabar-fn .metabar-fn-li .fa-phone {
             top: 4px; } }
-      .main-metabar .metabar-fn span .fa-shopping-cart {
+      .main-metabar .metabar-fn .metabar-fn-li .fa-shopping-cart {
         right: 5px; }
         @media (min-width: 768px) and (max-width:991px) {
-          .main-metabar .metabar-fn span .fa-shopping-cart {
+          .main-metabar .metabar-fn .metabar-fn-li .fa-shopping-cart {
             top: 3px; } }
-      .main-metabar .metabar-fn span .fa-search {
+      .main-metabar .metabar-fn .metabar-fn-li .fa-search {
         font-size: 26px;
         position: relative;
         top: 2px; }
         @media (min-width: 768px) and (max-width:991px) {
-          .main-metabar .metabar-fn span .fa-search {
+          .main-metabar .metabar-fn .metabar-fn-li .fa-search {
             font-size: 20px;
             top: 3px; } }
       @media (min-width: 768px) and (max-width:991px) {
-        .main-metabar .metabar-fn span b {
+        .main-metabar .metabar-fn .metabar-fn-li b {
           display: none; } }
     .main-metabar .metabar-fn a {
       color: black; }
@@ -1189,6 +1240,8 @@ fieldset[disabled] .btn-link:hover {
   height: 620px;
   position: relative;
   color: white; }
+  .landing-section.is-box-shadow {
+    overflow: hidden; }
   .landing-section .section-title {
     font-size: 65px; }
   .landing-section .section-subtitle {
@@ -1253,6 +1306,9 @@ fieldset[disabled] .btn-link:hover {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
+    @media (max-width: 767px ) {
+      .landing-section-6 .section-content-block {
+        display: block; } }
     .landing-section-6 .section-content-block .section-content-item {
       background-size: cover;
       display: inline-block;
