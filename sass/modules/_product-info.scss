@@ -91,7 +91,7 @@
     }
 }
 
-.product-info-section-3{
+.product-info-section-3 {
     background-size: cover;
     position: relative;
     color: white;
@@ -103,7 +103,7 @@
     }
 }
 
-.product-info-section-4{
+.product-info-section-4 {
     background-size: cover;
     position: relative;
     color: white;
@@ -126,6 +126,84 @@
             }
         }
     }
-
 }
+.product-detail {
+    /**
+    * Variables
+    */
 
+    // Spacing
+    $base-spacing: 1em;
+
+    // Colors
+    $off-white: #f5f5f5;
+
+    // Thumb Opacity Settings
+    $thumb-opacity-inactive: 0.75;
+    $thumb-opacity-hover: 1;
+    $thumb-opacity-active: 0.2;
+
+    // Icon Opacity Settings
+    $icon-opacity-norm: 0.5;
+    $icon-opacity-hover: 1;
+
+    // Transition Settings
+    $base-transition-timing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    $base-transition-duration: .3s;
+
+    /**
+    * Base Styles
+    * 1. Improve box model
+    * 2. Enable fluid images
+    */
+
+    img {
+        max-width: 100%; /* 2 */
+    }
+
+    /**
+    * Container Styles
+    */
+
+    /**
+    * Gallery Styles
+    * 1. Enable fluid images
+    */
+
+    .gallery {
+        overflow: hidden;
+    }
+
+    .gallery__hero {
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 20px;
+        background: #fff;
+        width: 100%;
+        img {
+            border: 1px solid #eaeaea;
+            width: 100%;
+        }
+    }
+
+    .gallery__thumbs {
+        background: #fff;
+        a {
+            display: inline-block;
+            width: 32.4%;
+            padding: $base-spacing/2;
+            opacity: $thumb-opacity-inactive;
+            transition: opacity $base-transition-duration
+                $base-transition-timing;
+
+            &:hover {
+                opacity: $thumb-opacity-hover;
+            }
+
+            // Modifiers
+            &.is-active {
+                opacity: $thumb-opacity-active;
+            }
+        }
+    }
+}

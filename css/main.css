@@ -1643,6 +1643,51 @@ fieldset[disabled] .btn-link:hover {
       font-size: 16px;
       letter-spacing: 1px; }
 
+.product-detail {
+  /**
+    * Variables
+    */
+  /**
+    * Base Styles
+    * 1. Improve box model
+    * 2. Enable fluid images
+    */
+  /**
+    * Container Styles
+    */
+  /**
+    * Gallery Styles
+    * 1. Enable fluid images
+    */ }
+  .product-detail img {
+    max-width: 100%;
+    /* 2 */ }
+  .product-detail .gallery {
+    overflow: hidden; }
+  .product-detail .gallery__hero {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+    background: #fff;
+    width: 100%; }
+    .product-detail .gallery__hero img {
+      border: 1px solid #eaeaea;
+      width: 100%; }
+  .product-detail .gallery__thumbs {
+    background: #fff; }
+    .product-detail .gallery__thumbs a {
+      display: inline-block;
+      width: 32.4%;
+      padding: 0.5em;
+      opacity: 0.75;
+      -webkit-transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -o-transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+      .product-detail .gallery__thumbs a:hover {
+        opacity: 1; }
+      .product-detail .gallery__thumbs a.is-active {
+        opacity: 0.2; }
+
 .product-inner {
   margin: 0 auto; }
   @media (min-width: 1200px) {

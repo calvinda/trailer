@@ -22,11 +22,116 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+        $(document).ready(function () {
+            var App = (function () {
 
+                //=== Use Strict ===//
+                'use strict';
+
+                //=== Private Variables ===//
+                var gallery = $('#js-gallery');
+
+                //=== Gallery Object ===//
+                var Gallery = {
+                    zoom: function (imgContainer, img) {
+                        var containerHeight = imgContainer.outerHeight(),
+                            src = img.attr('src');
+
+                        if (src.indexOf('/products/normal/') != -1) {
+                            // Set height of container
+                            imgContainer.css("height", containerHeight);
+
+                            // Switch hero image src with large version
+                            img.attr('src', src.replace('/products/normal/', '/products/zoom/'));
+
+                            // Add zoomed class to gallery container
+                            gallery.addClass('is-zoomed');
+
+                            // Enable image to be draggable
+                            img.draggable({
+                                drag: function (event, ui) {
+                                    ui.position.left = Math.min(100, ui.position.left);
+                                    ui.position.top = Math.min(100, ui.position.top);
+                                }
+                            });
+                        } else {
+                            // Ensure height of container fits image
+                            imgContainer.css("height", "auto");
+
+                            // Switch hero image src with normal version
+                            img.attr('src', src.replace('/products/zoom/', '/products/normal/'));
+
+                            // Remove zoomed class to gallery container
+                            gallery.removeClass('is-zoomed');
+                        }
+                    },
+                    switch: function (trigger, imgContainer) {
+                        var src = trigger.attr('href'),
+                            thumbs = trigger.siblings(),
+                            img = trigger.parent().prev().children();
+
+                        // Add active class to thumb
+                        trigger.addClass('is-active');
+
+                        // Remove active class from thumbs
+                        thumbs.each(function () {
+                            if ($(this).hasClass('is-active')) {
+                                $(this).removeClass('is-active');
+                            }
+                        });
+
+                        // Reset container if in zoom state
+                        if (gallery.hasClass('is-zoomed')) {
+                            gallery.removeClass('is-zoomed');
+                            imgContainer.css("height", "auto");
+                        }
+
+                        // Switch image source
+                        img.attr('src', src);
+                    }
+                };
+
+                //=== Public Methods ===//
+                function init() {
+
+                    // Listen for clicks on anchors within gallery
+                    gallery.delegate('a', 'click', function (event) {
+                        var trigger = $(this);
+                        var triggerData = trigger.data("gallery");
+
+                        if (triggerData === 'zoom') {
+                            var imgContainer = trigger.parent(),
+                                img = trigger.siblings();
+                            Gallery.zoom(imgContainer, img);
+                        } else if (triggerData === 'thumb') {
+                            var imgContainer = trigger.parent().siblings();
+                            Gallery.switch(trigger, imgContainer);
+                        } else {
+                            return;
+                        }
+
+                        event.preventDefault();
+                    });
+
+                }
+
+                //=== Make Methods Public ===//
+                return {
+                    init: init
+                };
+
+            })();
+
+            App.init();
+        });
+    </script>
 </head>
 
 <body>
@@ -88,10 +193,36 @@
     </header>
 
     <div class="product-inner">
-        <div class="product-detail">
+        <div class="product-detail container">
             <div class="row">
                 <div class="col-sm-5">
 
+                    <!-- Gallery -->
+                    <div id="js-gallery" class="gallery">
+
+                        <!--Gallery Hero-->
+                        <div class="gallery__hero">
+                            <img src="images/product-1.jpg">
+                        </div>
+                        <!--Gallery Hero-->
+
+                        <!--Gallery Thumbs-->
+                        <div class="gallery__thumbs">
+                            <a href="images/product-1.jpg" data-gallery="thumb" class="is-active">
+                                  <img src="images/product-1.jpg">
+                                </a>
+                            <a href="images/product-2.jpg" data-gallery="thumb">
+                                  <img src="images/product-2.jpg">
+                                </a>
+                        </div>
+                        <!--Gallery Thumbs-->
+
+                    </div>
+                    <!--.gallery-->
+                    <!-- Gallery -->
+
+
+                    <!--.container-->
                 </div>
                 <div class="col-sm-7">
                     <div class="product-details-info">
@@ -109,38 +240,61 @@
                                 </select>
                             </lable>
                             <lable class="select-qty">
-                                    <select>
+                                <select>
                                         <option>QTY</option>
                                     </select>
-                                </lable>
+                            </lable>
                         </div>
                     </div>
                     <hr>
                     <div class="product-details-feature">
                         <div class="product-details-feature-notice">Order NOW to get Free Shipping!!</div>
-                        Introducing the bigger brother, the Trailer Valet XL! Trailer dollies are a dime a dozen, but they're all big, bulky, and expensive. You're either plugged to the wall or it's too heavy to take to the campsite, but not the Trailer Valet XL. The XL is the lightest, toughest, BADDEST trailer dolly on the market today! Just like it's little brother, it features the same high quality parts, an automatic brake, and dual 9″ tires, but we've also added some awesome new features. It's the first and only dolly that allows you to move most trailers using an 18V cordless drill; it features our patented ball attachment that connects directly to the trailer coupler and allows you to attach and detach in seconds; and finally, it's the most compact and portable dolly on the market that can handle up to 10,000lbs of weight! So why spend thousands in getting something that you can't take with you, and get the dolly that can actually get the job done.
-                        Each box includes a Drill Attachment and our Patented Ball Mount.
+                        Introducing the bigger brother, the Trailer Valet XL! Trailer dollies are a dime a dozen, but they're all big, bulky, and
+                        expensive. You're either plugged to the wall or it's too heavy to take to the campsite, but not the
+                        Trailer Valet XL. The XL is the lightest, toughest, BADDEST trailer dolly on the market today! Just
+                        like it's little brother, it features the same high quality parts, an automatic brake, and dual 9″
+                        tires, but we've also added some awesome new features. It's the first and only dolly that allows
+                        you to move most trailers using an 18V cordless drill; it features our patented ball attachment that
+                        connects directly to the trailer coupler and allows you to attach and detach in seconds; and finally,
+                        it's the most compact and portable dolly on the market that can handle up to 10,000lbs of weight!
+                        So why spend thousands in getting something that you can't take with you, and get the dolly that
+                        can actually get the job done. Each box includes a Drill Attachment and our Patented Ball Mount.
                     </div>
-                   
+
                     <div class="row">
                         <div class="col-sm-12">
-                                <button class="btn-add-cart">ADD TO CART</button>
+                            <button class="btn-add-cart">ADD TO CART</button>
                         </div>
                     </div>
 
-                   <div class="product-details-description">
-                    <h4>Product Description</h4>
-                    <div class="description-content">
-                       The Trailer Valet XL is the toughest, most compact trailer dolly on the market today. It shares the same great features as it’s little brother, but also comes with a few upgrades. The XL moves most trailers up to 10,000lbs just by simply using a our quick attach crank handle or an 18V drill. It features dual 9 inch tires that can withstand up to 500lbs per tire, and our positraction technology for making tight turns. The automatic brake engages when the handle is released for superior safety. Making it ideal for boat, RV, construction, farm, horse, RTV, and flat bed trailers.
-                       The Trailer Valet XL is the toughest, most compact trailer dolly on the market today. It shares the same great features as it’s little brother, but also comes with a few upgrades. The XL moves most trailers up to 10,000lbs just by simply using a our quick attach crank handle or an 18V drill. It features dual 9 inch tires that can withstand up to 500lbs per tire, and our positraction technology for making tight turns. The automatic brake engages when the handle is released for superior safety. Making it ideal for boat, RV, construction, farm, horse, RTV, and flat bed trailers.
-                       The Trailer Valet XL is the toughest, most compact trailer dolly on the market today. It shares the same great features as it’s little brother, but also comes with a few upgrades. The XL moves most trailers up to 10,000lbs just by simply using a our quick attach crank handle or an 18V drill. It features dual 9 inch tires that can withstand up to 500lbs per tire, and our positraction technology for making tight turns. The automatic brake engages when the handle is released for superior safety. Making it ideal for boat, RV, construction, farm, horse, RTV, and flat bed trailers.
-                       <div class="show-more-mask"></div>
+                    <div class="product-details-description">
+                        <h4>Product Description</h4>
+                        <div class="description-content">
+                            The Trailer Valet XL is the toughest, most compact trailer dolly on the market today. It shares the same great features as
+                            it’s little brother, but also comes with a few upgrades. The XL moves most trailers up to 10,000lbs
+                            just by simply using a our quick attach crank handle or an 18V drill. It features dual 9 inch
+                            tires that can withstand up to 500lbs per tire, and our positraction technology for making tight
+                            turns. The automatic brake engages when the handle is released for superior safety. Making it
+                            ideal for boat, RV, construction, farm, horse, RTV, and flat bed trailers. The Trailer Valet
+                            XL is the toughest, most compact trailer dolly on the market today. It shares the same great
+                            features as it’s little brother, but also comes with a few upgrades. The XL moves most trailers
+                            up to 10,000lbs just by simply using a our quick attach crank handle or an 18V drill. It features
+                            dual 9 inch tires that can withstand up to 500lbs per tire, and our positraction technology for
+                            making tight turns. The automatic brake engages when the handle is released for superior safety.
+                            Making it ideal for boat, RV, construction, farm, horse, RTV, and flat bed trailers. The Trailer
+                            Valet XL is the toughest, most compact trailer dolly on the market today. It shares the same
+                            great features as it’s little brother, but also comes with a few upgrades. The XL moves most
+                            trailers up to 10,000lbs just by simply using a our quick attach crank handle or an 18V drill.
+                            It features dual 9 inch tires that can withstand up to 500lbs per tire, and our positraction
+                            technology for making tight turns. The automatic brake engages when the handle is released for
+                            superior safety. Making it ideal for boat, RV, construction, farm, horse, RTV, and flat bed trailers.
+                            <div class="show-more-mask"></div>
+                        </div>
+
+                        <button class="show-more">SHOW MORE</button>
+
                     </div>
 
-                    <button class="show-more">SHOW MORE</button>
-                    
-                   </div>
-                   
                 </div>
             </div>
         </div>
