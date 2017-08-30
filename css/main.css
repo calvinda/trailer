@@ -6,10 +6,10 @@
 /*
     variables
 */
-.footer-info, .landing-section {
+.footer-info, .landing-section, .label-title, .buy-btn-block-fixed a, .product-info-section-1 .section-content .buy-btn-block, .product-list .product-list-item .product-list-img .sale-label, .product-detail .btn-add-cart, .product-detail .product-details-description .show-more {
   font-family: 'Bebas Neue'; }
 
-.landing-section-6 .section-content-block .section-content-item .section-content .section-subtitle {
+.landing-section-6 .section-content-block .section-content-item .section-content .section-subtitle, .product-detail .product-details-info h2, .product-detail .product-details-description h4 {
   font-family: 'Helvetica Neue', '微軟正黑體', 'Arial', sans-serif; }
 
 /*
@@ -1230,9 +1230,8 @@ fieldset[disabled] .btn-link:hover {
   background-color: #222222;
   min-height: 100px;
   padding: 0 30px 50px; }
-  @media (min-width: 768px) and (max-width:991px) {
-    .footer-info .container {
-      width: 100%; } }
+  .footer-info .container {
+    width: 100%; }
   .footer-info h3 {
     margin: 70px 0 50px;
     color: white;
@@ -1461,13 +1460,16 @@ fieldset[disabled] .btn-link:hover {
     background-size: cover; }
   .accessories-section .section-title {
     display: inline-block;
-    font-size: 65px;
-    width: 50%; }
+    font-size: 85px;
+    width: 45%; }
+    @media (max-width: 767px ) {
+      .accessories-section .section-title {
+        font-size: 60px; } }
   .accessories-section .btn {
     border: none;
     padding: 0;
-    text-decoration: underline;
-    font-size: 18px; }
+    font-size: 30px;
+    text-decoration: underline; }
     .accessories-section .btn i {
       margin-left: 5px; }
 
@@ -1505,7 +1507,6 @@ fieldset[disabled] .btn-link:hover {
           padding-left: 10px; } }
       .accessories-section-2 .section-block-t .section-content .section-title {
         display: inline-block;
-        font-size: 65px;
         width: 580px; }
         @media (max-width: 767px ) {
           .accessories-section-2 .section-block-t .section-content .section-title {
@@ -1519,10 +1520,10 @@ fieldset[disabled] .btn-link:hover {
         height: 430px;
         margin-right: -15px; }
         .accessories-section-2 .section-block-l .section-content {
-          margin-top: 20%; } }
+          margin-top: 15%; } }
     @media (min-width: 768px) and (max-width:991px) {
       .accessories-section-2 .section-block-l .section-content {
-        margin-top: 20%;
+        margin-top: 15%;
         padding-left: 8%; } }
   .accessories-section-2 .section-block-r {
     height: 760px;
@@ -1562,7 +1563,6 @@ fieldset[disabled] .btn-link:hover {
 .section-block-parts .yellow {
   color: #ffc82c;
   letter-spacing: -1px;
-  font-size: 57px;
   margin-top: 95px; }
   @media (max-width: 767px ) {
     .section-block-parts .yellow {
@@ -1573,10 +1573,9 @@ fieldset[disabled] .btn-link:hover {
   height: 620px; }
   .section-block-parts-t .section-content {
     margin-left: 8%;
-    margin-top: 18%; }
+    margin-top: 14%; }
     .section-block-parts-t .section-content .btn-info {
-      margin-left: 9px;
-      font-weight: bold; }
+      margin-left: 9px; }
 
 .modify-right-padding {
   padding-right: 0; }
@@ -1611,7 +1610,7 @@ fieldset[disabled] .btn-link:hover {
     .about-section-1 {
       height: 320px; } }
   .about-section-1 .about-section-1-info {
-    margin-top: 230px; }
+    margin-top: 200px; }
     @media (max-width: 767px ) {
       .about-section-1 .about-section-1-info {
         margin-top: 0; } }
@@ -1620,10 +1619,18 @@ fieldset[disabled] .btn-link:hover {
         margin-top: 100px; } }
     .about-section-1 .about-section-1-info h2 {
       color: white;
-      font-size: 56px;
-      font-weight: bold; }
+      font-size: 80px;
+      letter-spacing: 1px; }
+      @media (max-width: 767px ) {
+        .about-section-1 .about-section-1-info h2 {
+          font-size: 55px; } }
     .about-section-1 .about-section-1-info h3 {
-      color: white; }
+      color: white;
+      font-size: 40px;
+      letter-spacing: 1px; }
+      @media (max-width: 767px ) {
+        .about-section-1 .about-section-1-info h3 {
+          font-size: 20px; } }
     .about-section-1 .about-section-1-info .btn-primary {
       color: black;
       border-radius: 50px;
@@ -1640,19 +1647,26 @@ fieldset[disabled] .btn-link:hover {
     .about-section-2 {
       padding: 30px 0; } }
   .about-section-2 h2 {
-    font-size: 46px;
+    font-size: 80px;
+    letter-spacing: 1px;
     color: black;
-    font-weight: bold;
     margin-bottom: 0; }
+    @media (max-width: 767px ) {
+      .about-section-2 h2 {
+        font-size: 55px; } }
   .about-section-2 p {
-    width: 60%;
+    width: 80%;
     margin: 35px auto;
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 30px;
     text-align: left;
     font-weight: 400; }
     @media (max-width: 767px ) {
       .about-section-2 p {
         width: 90%; } }
+    @media (min-width: 1200px) {
+      .about-section-2 p {
+        width: 60%; } }
 
 .about-section-3 .about-visual-row-1 {
   display: -webkit-box;
@@ -1801,7 +1815,7 @@ fieldset[disabled] .btn-link:hover {
   color: #ffc82c;
   font-weight: 400;
   display: inline-block;
-  font-size: 25px;
+  font-size: 35px;
   border-bottom: 3px solid #ffc82c;
   padding-bottom: 6px; }
 
@@ -1832,7 +1846,8 @@ fieldset[disabled] .btn-link:hover {
     text-align: center;
     font-weight: bold;
     color: black;
-    font-size: 14px; }
+    font-size: 22px;
+    letter-spacing: 1px; }
     .buy-btn-block-fixed a:hover {
       background-color: #D89B0D; }
 
@@ -1844,7 +1859,10 @@ fieldset[disabled] .btn-link:hover {
   padding-bottom: 40px; }
   .product-info-section-1 .section-content h2 {
     margin-top: 120px;
-    font-size: 60px; }
+    font-size: 80px; }
+    @media (max-width: 767px ) {
+      .product-info-section-1 .section-content h2 {
+        font-size: 60px; } }
   .product-info-section-1 .section-content .buy-btn-block {
     background-color: #ffc82c;
     padding: 6px;
@@ -1854,7 +1872,8 @@ fieldset[disabled] .btn-link:hover {
     text-align: center;
     font-weight: bold;
     color: black;
-    font-size: 14px; }
+    font-size: 22px;
+    letter-spacing: 1px; }
     .product-info-section-1 .section-content .buy-btn-block:hover {
       background-color: #D89B0D; }
   .product-info-section-1 .section-content .play-btn {
@@ -1875,12 +1894,15 @@ fieldset[disabled] .btn-link:hover {
   background-size: cover;
   position: relative;
   color: white;
-  padding-top: 94px;
+  padding-top: 80px;
   padding-bottom: 40px;
   min-height: 550px; }
   .product-info-section-2 .section-content h2 {
     margin-top: 30px;
-    font-size: 60px; }
+    font-size: 80px; }
+    @media (max-width: 767px ) {
+      .product-info-section-2 .section-content h2 {
+        font-size: 60px; } }
   .product-info-section-2 .active-link {
     margin-top: 20px; }
 
@@ -1892,7 +1914,10 @@ fieldset[disabled] .btn-link:hover {
   min-height: 550px; }
   .product-info-section-3 h2 {
     margin-top: 30px;
-    font-size: 60px; }
+    font-size: 80px; }
+    @media (max-width: 767px ) {
+      .product-info-section-3 h2 {
+        font-size: 60px; } }
 
 .product-info-section-4 {
   background-size: cover;
@@ -1900,9 +1925,15 @@ fieldset[disabled] .btn-link:hover {
   color: white;
   padding-top: 130px;
   min-height: 550px; }
+  @media (max-width: 767px ) {
+    .product-info-section-4 {
+      padding-bottom: 80px; } }
   .product-info-section-4 h2 {
     margin-top: 30px;
-    font-size: 60px; }
+    font-size: 80px; }
+    @media (max-width: 767px ) {
+      .product-info-section-4 h2 {
+        font-size: 60px; } }
   .product-info-section-4 .features {
     max-width: 780px;
     margin: 55px auto 20px;
@@ -2024,7 +2055,8 @@ fieldset[disabled] .btn-link:hover {
         color: white;
         text-align: center;
         font-weight: bolder;
-        font-size: 18px;
+        font-size: 26px;
+        letter-spacing: 1px;
         line-height: 64px;
         height: 65px;
         width: 65px; }
@@ -2059,8 +2091,7 @@ fieldset[disabled] .btn-link:hover {
 .product-detail {
   margin-top: 110px; }
   .product-detail .product-details-info h2 {
-    font-size: 28px;
-    font-weight: bold; }
+    font-size: 28px; }
   .product-detail .price {
     font-size: 32px;
     display: inline-block;
@@ -2076,10 +2107,12 @@ fieldset[disabled] .btn-link:hover {
   .product-detail .price.sale-price .final-price {
     color: #df0000;
     font-weight: 400; }
-  .product-detail .product-details-select .select-size, .product-detail .product-details-select .select-qty {
+  .product-detail .product-details-select .select-size,
+  .product-detail .product-details-select .select-qty {
     position: relative;
     display: inline-block; }
-    .product-detail .product-details-select .select-size:before, .product-detail .product-details-select .select-qty:before {
+    .product-detail .product-details-select .select-size:before,
+    .product-detail .product-details-select .select-qty:before {
       content: '';
       height: 35px;
       position: absolute;
@@ -2089,8 +2122,9 @@ fieldset[disabled] .btn-link:hover {
       background: #fff;
       pointer-events: none;
       display: block; }
-    .product-detail .product-details-select .select-size:after, .product-detail .product-details-select .select-qty:after {
-      content: " ";
+    .product-detail .product-details-select .select-size:after,
+    .product-detail .product-details-select .select-qty:after {
+      content: ' ';
       position: absolute;
       right: 20px;
       top: 46%;
@@ -2103,7 +2137,8 @@ fieldset[disabled] .btn-link:hover {
       border-width: 11.9px 8px 0 8px;
       border-color: #111 transparent transparent transparent;
       pointer-events: none; }
-    .product-detail .product-details-select .select-size select, .product-detail .product-details-select .select-qty select {
+    .product-detail .product-details-select .select-size select,
+    .product-detail .product-details-select .select-qty select {
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
@@ -2131,7 +2166,8 @@ fieldset[disabled] .btn-link:hover {
       margin: 20px 0; }
   .product-detail .btn-add-cart {
     background-color: #ffc82c;
-    font-size: 20px;
+    font-size: 30px;
+    letter-spacing: 2px;
     font-weight: bold;
     padding: 17px 75px;
     margin: 18px 0; }
@@ -2162,8 +2198,9 @@ fieldset[disabled] .btn-link:hover {
         background-image: -o-linear-gradient(top, rgba(85, 19, 19, 0) 2%, #ffffff 90%);
         background-image: linear-gradient(-180deg, rgba(85, 19, 19, 0) 2%, #ffffff 90%); }
     .product-detail .product-details-description .show-more {
+      font-size: 30px;
+      letter-spacing: 2px;
       background-color: #f7f7f7;
-      padding: 12px 56px;
-      font-size: 20px;
+      padding: 17px 75px;
       color: #adadad;
       position: relative; }

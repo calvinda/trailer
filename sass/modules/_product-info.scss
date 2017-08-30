@@ -7,10 +7,11 @@
 }
 
 .label-title {
+    @extend %theme-font;
     color: $primary-color;
     font-weight: 400;
     display: inline-block;
-    font-size: 25px;
+    font-size: 35px;
     border-bottom: 3px solid $primary-color;
     padding-bottom: 6px;
 }
@@ -39,6 +40,7 @@
     padding: 20px;
     border-bottom: 1px solid #ffc82c;
     a {
+        @extend %theme-font;
         background-color: $primary-color;
         padding: 6px;
         width: 315px;
@@ -46,7 +48,8 @@
         text-align: center;
         font-weight: bold;
         color: black;
-        font-size: 14px;
+        font-size: 22px;
+        letter-spacing: 1px;
         &:hover {
             background-color: $primary-darken;
         }
@@ -61,9 +64,13 @@
     .section-content {
         h2 {
             margin-top: 120px;
-            font-size: 60px;
+            font-size: 80px;
+            @media (--mobile) {
+                font-size: 60px;
+            }
         }
         .buy-btn-block {
+            @extend %theme-font;
             background-color: $primary-color;
             padding: 6px;
             width: 315px;
@@ -72,7 +79,8 @@
             text-align: center;
             font-weight: bold;
             color: black;
-            font-size: 14px;
+            font-size: 22px;
+            letter-spacing: 1px;
             &:hover {
                 background-color: $primary-darken;
             }
@@ -100,13 +108,16 @@
     background-size: cover;
     position: relative;
     color: white;
-    padding-top: 94px;
+    padding-top: 80px;
     padding-bottom: 40px;
     min-height: 550px;
     .section-content {
         h2 {
             margin-top: 30px;
-            font-size: 60px;
+            font-size: 80px;
+            @media (--mobile) {
+                font-size: 60px;
+            }
         }
     }
 
@@ -123,7 +134,10 @@
     min-height: 550px;
     h2 {
         margin-top: 30px;
-        font-size: 60px;
+        font-size: 80px;
+        @media (--mobile) {
+            font-size: 60px;
+        }
     }
 }
 
@@ -133,9 +147,15 @@
     color: white;
     padding-top: 130px;
     min-height: 550px;
+    @media (--mobile) {
+        padding-bottom: 80px;
+    }
     h2 {
         margin-top: 30px;
-        font-size: 60px;
+        font-size: 80px;
+        @media (--mobile) {
+            font-size: 60px;
+        }
     }
 
     .features {

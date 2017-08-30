@@ -113,11 +113,15 @@ $(document).ready(function() {
             .closest('.main-menu-shop')
             .toggleClass('active');
     });
+    $('.show-more').click(function(e) {
+        $(this).hide();
+        $('.show-more-mask').hide();
+        $('.description-content').css('max-height', 'unset');
+    });
 
     $(window).scroll(function() {
         var scrollTop =
             document.documentElement.scrollTop + document.body.scrollTop;
-        console.log(scrollTop);
         if ($('.buy-btn-block-fixed')) {
             if (scrollTop > 200) {
                 $('.buy-btn-block-fixed').slideDown();

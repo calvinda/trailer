@@ -12,7 +12,7 @@
         height: 320px;
     }
     .about-section-1-info {
-        margin-top: 230px;
+        margin-top: 200px;
         @media (--mobile) {
             margin-top: 0;
         }
@@ -21,11 +21,19 @@
         }
         h2 {
             color: white;
-            font-size: 56px;
-            font-weight: bold;
+            font-size: 80px;
+            letter-spacing: 1px;
+            @media (--mobile) {
+                font-size: 55px;
+            }
         }
         h3 {
             color: white;
+            font-size: 40px;
+            letter-spacing: 1px;
+            @media (--mobile) {
+                font-size: 20px;
+            }
         }
         .btn-primary {
             color: black;
@@ -46,19 +54,26 @@
         padding: 30px 0;
     }
     h2 {
-        font-size: 46px;
+        font-size: 80px;
+        letter-spacing: 1px;
         color: black;
-        font-weight: bold;
         margin-bottom: 0;
+        @media (--mobile) {
+            font-size: 55px;
+        }
     }
     p {
-        width: 60%;
+        width: 80%;
         margin: 35px auto;
-        font-size: 16px;
+        font-size: 18px;
+        line-height: 30px;
         text-align: left;
         font-weight: 400;
         @media (--mobile) {
             width: 90%;
+        }
+        @media (--l-desktop) {
+            width: 60%;
         }
     }
 }

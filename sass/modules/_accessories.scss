@@ -5,14 +5,17 @@
     }
     .section-title {
         display: inline-block;
-        font-size: 65px;
-        width: 50%;
+        font-size: 85px;
+        width: 45%;
+        @media (--mobile) {
+            font-size: 60px;
+        }
     }
     .btn {
         border: none;
         padding: 0;
+        font-size: 30px;
         text-decoration: underline;
-        font-size: 18px;
         i {
             margin-left: 5px;
         }
@@ -57,7 +60,6 @@
             }
             .section-title {
                 display: inline-block;
-                font-size: 65px;
                 width: 580px;
                 @media (--mobile) {
                     width: auto;
@@ -74,12 +76,12 @@
             height: 430px;
             margin-right: -15px;
             .section-content {
-                margin-top: 20%;
+                margin-top: 15%;
             }
         }
         @media (--pad) {
             .section-content {
-                margin-top: 20%;
+                margin-top: 15%;
                 padding-left: 8%;
             }
         }
@@ -131,7 +133,6 @@
     .yellow {
         color: #ffc82c;
         letter-spacing: -1px;
-        font-size: 57px;
         margin-top: 95px;
         @media (--mobile) {
             margin: 35px 0;
@@ -144,10 +145,9 @@
     height: 620px;
     .section-content {
         margin-left: 8%;
-        margin-top: 18%;
+        margin-top: 14%;
         .btn-info {
             margin-left: 9px;
-            font-weight: bold;
         }
     }
 }
