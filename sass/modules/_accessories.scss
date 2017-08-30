@@ -32,6 +32,12 @@
 
 .accessories-section-2 {
     padding: 70px 0 30px;
+    .section-block {
+        @media (--pad) {
+            width: 100%;
+            margin: auto;
+        }
+    }
     .section-block-t {
         height: 620px;
         @media (--mobile) {
@@ -63,18 +69,18 @@
         margin-bottom: 30px;
     }
     .section-block-l {
-        margin-right: 0;
         height: 760px;
         @media (--mobile) {
             height: 430px;
             margin-right: -15px;
             .section-content {
-                margin-top: 30%;
+                margin-top: 20%;
             }
         }
         @media (--pad) {
             .section-content {
-                margin-top: 50%;
+                margin-top: 20%;
+                padding-left: 8%;
             }
         }
     }
@@ -90,11 +96,6 @@
             text-align: center;
             .section-title {
                 text-align: left;
-                @media (--mobile) {
-                    width: 100%;
-                    text-align: center;
-                    margin-top: 27%;
-                }
             }
         }
         .section-block-r-t {
@@ -105,6 +106,11 @@
                     margin-top: 22%;
                     width: 100%;
                     text-align: center;
+                }
+                @media (--mobile) {
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 27%;
                 }
             }
         }
@@ -149,10 +155,15 @@
 .modify-right-padding {
     padding-right: 0;
     @media (--mobile) {
-        padding-right: auto;
+        padding-right: 15px;
     }
 }
-
+.modify-left-padding {
+    padding-left: 0;
+    @media (--mobile) {
+        padding-left: 15px;
+    }
+}
 .modify-right-bg {
     background-position: 14px 0;
     background-repeat: no-repeat;

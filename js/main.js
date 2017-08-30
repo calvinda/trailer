@@ -113,4 +113,17 @@ $(document).ready(function() {
             .closest('.main-menu-shop')
             .toggleClass('active');
     });
+
+    $(window).scroll(function() {
+        var scrollTop =
+            document.documentElement.scrollTop + document.body.scrollTop;
+        console.log(scrollTop);
+        if ($('.buy-btn-block-fixed')) {
+            if (scrollTop > 200) {
+                $('.buy-btn-block-fixed').slideDown();
+            } else {
+                $('.buy-btn-block-fixed').slideUp();
+            }
+        }
+    });
 });

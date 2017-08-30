@@ -28,6 +28,30 @@
     }
 }
 
+.buy-btn-block-fixed {
+    text-align: center;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-bottom: 1px solid #ffc82c;
+    a {
+        background-color: $primary-color;
+        padding: 6px;
+        width: 315px;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        color: black;
+        font-size: 14px;
+        &:hover {
+            background-color: $primary-darken;
+        }
+    }
+}
 .product-info-section-1 {
     background-size: cover;
     position: relative;
@@ -148,8 +172,8 @@
     $icon-opacity-hover: 1;
 
     // Transition Settings
-    $base-transition-timing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
-    $base-transition-duration: .3s;
+    $base-transition-timing: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    $base-transition-duration: 0.3s;
 
     /**
     * Base Styles
