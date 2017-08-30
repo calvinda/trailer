@@ -8,6 +8,7 @@
 
 //首頁 The best jack on the planet
 .landing-section {
+    @extend %theme-font;
     &.is-box-shadow {
         overflow: hidden;
     }
@@ -16,16 +17,29 @@
     position: relative;
     color: white;
     .section-title {
-        font-size: 65px;
+        font-size: 70px;
+        @media (--mobile) {
+            font-size: 65px;
+        }
     }
     .section-subtitle {
-        font-size: 25px;
+        font-size: 40px;
         line-height: 35px;
+        @media (--mobile) {
+            font-size: 35px;
+        }
     }
     .btn {
-        border-radius: 20px;
         padding: 10px 20px;
         margin-right: 10px;
+        font-size: 20px;
+        letter-spacing: 2px;
+        border-radius: 30px;
+        @media (--mobile) {
+            display: block;
+            width: min-content;
+            margin: 10px 0;
+        }
     }
     .btn-primary {
         color: black;
@@ -33,54 +47,119 @@
 }
 .landing-section-1 {
     z-index: 5;
+    @media (--pad) {
+        height: 450px;
+    }
     .section-content {
         margin-top: 16%;
+        @media (--mobile) {
+            margin-top: 30%;
+        }
     }
 }
 .landing-section-2 {
     z-index: 4;
+    @media (--mobile) {
+        height: 550px;
+    }
+    @media (--pad) {
+        height: 450px;
+    }
+    .section-subtitle {
+        width: 65%;
+    }
     .section-content {
         margin-top: 13%;
         color: black;
+        @media (--mobile) {
+            margin-top: 20%;
+        }
     }
 }
 .landing-section-3 {
     z-index: 3;
+    @media (--mobile) {
+        height: 550px;
+    }
+    @media (--pad) {
+        height: 450px;
+    }
     .section-content {
         margin-top: 13%;
         color: black;
+        @media (--mobile) {
+            margin-top: 18%;
+        }
+        @media (--pad) {
+            margin-top: 10%;
+        }
     }
 }
 .landing-section-4 {
     z-index: 2;
+    @media (--mobile) {
+        height: 500px;
+    }
+    @media (--pad) {
+        height: 450px;
+    }
+    .section-subtitle {
+        width: 80%;
+    }
     .section-content {
         margin-top: 13%;
+        @media (--mobile) {
+            margin-top: 25%;
+        }
     }
 }
 .landing-section-5 {
     z-index: 1;
     color: white;
     text-align: center;
+    @media (--mobile) {
+        height: auto;
+    }
+    @media (--pad) {
+        height: 500px;
+    }
     .section-content {
         margin-top: 6%;
         .section-content-block {
             margin: 50px 0 90px;
+            @media (--mobile) {
+                margin: 30px 0;
+            }
+            @media (--pad) {
+                margin: 30px 0;
+            }
             .section-content-item {
                 display: inline-block;
-                font-size: 20px;
-                line-height: 25px;
-                font-weight: bolder;
+                font-size: 27px;
+                line-height: 30px;
+                letter-spacing: 1px;
                 width: 200px;
                 vertical-align: text-top;
+                @media (--mobile) {
+                    margin-bottom: 20px;
+                }
                 img {
                     margin-bottom: 10px;
                 }
+            }
+        }
+        .btn {
+            @media (--mobile) {
+                margin: 20px auto 50px;
             }
         }
     }
 }
 .landing-section-6 {
     z-index: 0;
+    @media (--mobile) {
+        height: auto;
+    }
     h2 {
         margin: 0;
     }
@@ -96,6 +175,12 @@
             background-size: cover;
             display: inline-block;
             height: 100%;
+            @media (--mobile) {
+                height: 500px;
+            }
+            @media (--pad) {
+                height: 500px;
+            }
             .section-content {
                 margin-top: 25%;
                 .section-title {
@@ -110,6 +195,9 @@
                 }
                 .section-subtitle {
                     font-size: 23px;
+                    font-weight: 100;
+                    letter-spacing: 1px;
+                    @extend %normal-font;
                 }
             }
         }

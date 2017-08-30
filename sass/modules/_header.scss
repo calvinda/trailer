@@ -19,7 +19,6 @@
             }
             @media (--mobile) {
                 padding: 10px 15px;
-
                 img {
                     width: 33px;
                 }
@@ -68,6 +67,7 @@
             height: 100vh;
             width: 200px;
             box-shadow: 5px 0px 20px 0px black;
+            overflow: scroll;
             &.active {
                 display: block;
             }
@@ -109,7 +109,21 @@
                 right: 0;
                 left: 0;
                 top: 50px;
+                @media (--mobile) {
+                    display: block;
+                    position: relative;
+                    left: -31px;
+                    top: 5px;
+                    overflow-y: hidden;
+                    width: 200px;
+                    height: 0;
+                    padding: 0;
+                    transition: height 1.5s;
+                }
                 .sub-menu {
+                    @media (--mobile) {
+                        margin: 15px 0;
+                    }
                     a {
                         color: white;
                         display: inline-block;
@@ -118,8 +132,14 @@
                         @media (--l-desktop) {
                             margin: 0px 40px;
                         }
+                        @media (--mobile) {
+                            padding: 5px 0;
+                        }
                         span {
                             display: block;
+                            @media (--mobile) {
+                                display: inline-block;
+                            }
                         }
                         &:hover {
                             opacity: 0.7;
@@ -128,10 +148,16 @@
                 }
             }
             &.active {
+                border-bottom: 3px solid black;
                 .sub-menu-bg {
                     display: block;
                 }
-                border-bottom: 3px solid black;
+                @media (--mobile) {
+                    border-bottom: none;
+                    .sub-menu-bg {
+                        height: 270px;
+                    }
+                }
             }
         }
     }

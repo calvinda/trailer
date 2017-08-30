@@ -1,4 +1,5 @@
-footer {}
+footer {
+}
 
 .bottom-service-info {
     background-color: #333333;
@@ -15,12 +16,15 @@ footer {}
 }
 
 .footer-info {
+    @extend %theme-font;
     background-color: #222222;
     min-height: 100px;
     padding: 0 30px 50px;
     h3 {
         margin: 70px 0 50px;
         color: white;
+        font-size: 30px;
+        letter-spacing: 1px;
     }
     .client-list {
         margin-top: 50px;
@@ -40,23 +44,29 @@ footer {}
         li {
             float: left;
             margin: 0 15px;
+            @media (--mobile) {
+                float: none;
+                margin: 10px;
+            }
             a {
                 color: $primary-color;
                 font-weight: bold;
-                font-size: 16px;
+                font-size: 20px;
+                letter-spacing: 1px;
             }
         }
     }
 
-    .footer-logo{
+    .footer-logo {
         width: 255px;
         margin-top: 35px;
     }
-    .footer-copyright{
+    .footer-copyright {
         color: white;
         font-size: 12px;
         display: block;
         margin-top: 23px;
         font-weight: 400;
+        letter-spacing: 1px;
     }
 }
