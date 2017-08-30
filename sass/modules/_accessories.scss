@@ -24,6 +24,9 @@
     height: 480px;
     .section-title {
         margin: 13% auto 0;
+        @media (--mobile) {
+            margin-top: 38%;
+        }
     }
 }
 
@@ -31,23 +34,26 @@
     padding: 70px 0 30px;
     .section-block-t {
         height: 620px;
+        @media (--mobile) {
+            height: 450px;
+        }
         .section-content {
             margin-top: 16%;
             padding-left: 582px;
-            @media(--desktop) {
+            @media (--desktop) {
                 padding-left: 300px;
             }
-            @media(--pad) {
+            @media (--pad) {
                 padding-left: 20px;
             }
-            @media(--mobile) {
+            @media (--mobile) {
                 padding-left: 10px;
             }
             .section-title {
                 display: inline-block;
                 font-size: 65px;
                 width: 580px;
-                @media(--mobile) {
+                @media (--mobile) {
                     width: auto;
                 }
             }
@@ -59,22 +65,47 @@
     .section-block-l {
         margin-right: 0;
         height: 760px;
+        @media (--mobile) {
+            height: 430px;
+            margin-right: -15px;
+            .section-content {
+                margin-top: 30%;
+            }
+        }
+        @media (--pad) {
+            .section-content {
+                margin-top: 50%;
+            }
+        }
     }
     .section-block-r {
         height: 760px;
         margin-left: 0;
         color: #f9cd12;
+        @media (--mobile) {
+            margin-left: -15px;
+        }
         .section-content {
             margin-top: 0%;
             text-align: center;
             .section-title {
                 text-align: left;
+                @media (--mobile) {
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 27%;
+                }
             }
         }
         .section-block-r-t {
             height: 40%;
             .section-title {
                 width: 75%;
+                @media (--pad) {
+                    margin-top: 22%;
+                    width: 100%;
+                    text-align: center;
+                }
             }
         }
         .section-block-r-b {
@@ -96,7 +127,7 @@
         letter-spacing: -1px;
         font-size: 57px;
         margin-top: 95px;
-        @media(--mobile) {
+        @media (--mobile) {
             margin: 35px 0;
         }
     }
@@ -117,7 +148,7 @@
 
 .modify-right-padding {
     padding-right: 0;
-    @media(--mobile) {
+    @media (--mobile) {
         padding-right: auto;
     }
 }
@@ -126,7 +157,7 @@
     background-position: 14px 0;
     background-repeat: no-repeat;
 
-    @media(--mobile) {
+    @media (--mobile) {
         background-position: 0;
     }
 }

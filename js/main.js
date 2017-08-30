@@ -49,7 +49,10 @@ $(document).ready(function() {
             switch: function(trigger, imgContainer) {
                 var src = trigger.attr('href'),
                     thumbs = trigger.siblings(),
-                    img = trigger.parent().prev().children();
+                    img = trigger
+                        .parent()
+                        .prev()
+                        .children();
 
                 // Add active class to thumb
                 trigger.addClass('is-active');
@@ -104,8 +107,10 @@ $(document).ready(function() {
     $('.main-metabar-nav-bar , .main-menu-wrapper-close').click(() => {
         $('.main-menu-wrapper').toggleClass('active');
     });
-    $('.main-menu-shop').click(function(e) {
+    $('.main-menu-shop-link').click(function(e) {
         e.preventDefault();
-        $(this).toggleClass('active');
+        $(this)
+            .closest('.main-menu-shop')
+            .toggleClass('active');
     });
 });
