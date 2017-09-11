@@ -1454,6 +1454,11 @@ fieldset[disabled] .btn-link:hover {
           font-weight: 100;
           letter-spacing: 1px; }
 
+.landing-section-mobile {
+  background-size: cover;
+  background-position: -20px;
+  background-repeat: no-repeat; }
+
 .accessories-section {
   height: auto; }
   .accessories-section .section-block {
