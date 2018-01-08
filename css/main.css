@@ -1281,11 +1281,17 @@ fieldset[disabled] .btn-link:hover {
 
 .landing-section {
   background-size: cover;
+  background-color: white;
   height: 620px;
   position: relative;
   color: white; }
   .landing-section.is-box-shadow {
     overflow: hidden; }
+  @media (min-width: 1600px) {
+    .landing-section {
+      background-repeat: no-repeat;
+      background-size: 80%;
+      background-color: white; } }
   .landing-section .section-title {
     font-size: 70px; }
     @media (max-width: 767px ) {

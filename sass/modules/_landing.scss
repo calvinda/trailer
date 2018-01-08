@@ -13,9 +13,15 @@
         overflow: hidden;
     }
     background-size: cover;
+    background-color: white;
     height: 620px;
     position: relative;
     color: white;
+    @media (min-width: 1600px) {
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-color: white;
+    }
     .section-title {
         font-size: 70px;
         @media (--mobile) {
@@ -58,6 +64,7 @@
     }
 }
 .landing-section-2 {
+
     z-index: 4;
     @media (--mobile) {
         height: 550px;
