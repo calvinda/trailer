@@ -19,13 +19,15 @@
     color: white;
     @media (min-width: 1600px) {
         background-repeat: no-repeat;
-        background-size: 80%;
-        background-color: white;
+        background-size: 1600px;
     }
     .section-title {
         font-size: 70px;
+        @media (--pad) {
+            font-size: 56px;
+        }
         @media (--mobile) {
-            font-size: 65px;
+            font-size: 56px;
         }
     }
     .section-subtitle {
@@ -51,6 +53,7 @@
         color: black;
     }
 }
+
 .landing-section-1 {
     z-index: 5;
     @media (--pad) {
@@ -61,19 +64,23 @@
         @media (--mobile) {
             margin-top: 30%;
         }
+
     }
 }
-.landing-section-2 {
 
+.landing-section-2 {
     z-index: 4;
     @media (--mobile) {
-        height: 550px;
+        height: 945px;
+        background-size: cover;
+        background-position: 62%;
+        background-repeat: no-repeat;
     }
     @media (--pad) {
-        height: 450px;
+        height: 550px;
     }
     .section-subtitle {
-        width: 65%;
+        width: 80%;
     }
     .section-content {
         margin-top: 13%;
@@ -82,14 +89,28 @@
             margin-top: 20%;
         }
     }
+
+
+    .section-img{
+        img{
+            width: 400px;
+            @media (--pad) {
+                width: 100%;
+            }
+            @media (--mobile) {
+                width: 100%;
+            }
+        }
+    }
 }
+
 .landing-section-3 {
     z-index: 3;
     @media (--mobile) {
-        height: 550px;
+        height: 940px;
     }
     @media (--pad) {
-        height: 450px;
+        height: 550px;
     }
     .section-content {
         margin-top: 13%;
@@ -101,7 +122,20 @@
             margin-top: 10%;
         }
     }
+
+    .section-img{
+        img{
+            width: 400px;
+            @media (--pad) {
+                width: 100%;
+            }
+            @media (--mobile) {
+                width: 100%;
+            }
+        }
+    }
 }
+
 .landing-section-4 {
     z-index: 2;
     @media (--mobile) {
@@ -120,6 +154,7 @@
         }
     }
 }
+
 .landing-section-5 {
     z-index: 1;
     color: white;
@@ -162,6 +197,7 @@
         }
     }
 }
+
 .landing-section-6 {
     z-index: 0;
     @media (--mobile) {
@@ -211,8 +247,7 @@
     }
 }
 
-
-.landing-section-mobile{
+.landing-section-mobile {
     background-size: cover;
     background-position: -20px;
     background-repeat: no-repeat;

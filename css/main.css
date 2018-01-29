@@ -1290,13 +1290,15 @@ fieldset[disabled] .btn-link:hover {
   @media (min-width: 1600px) {
     .landing-section {
       background-repeat: no-repeat;
-      background-size: 80%;
-      background-color: white; } }
+      background-size: 1600px; } }
   .landing-section .section-title {
     font-size: 70px; }
+    @media (min-width: 768px) and (max-width:991px) {
+      .landing-section .section-title {
+        font-size: 56px; } }
     @media (max-width: 767px ) {
       .landing-section .section-title {
-        font-size: 65px; } }
+        font-size: 56px; } }
   .landing-section .section-subtitle {
     font-size: 40px;
     line-height: 35px; }
@@ -1334,27 +1336,38 @@ fieldset[disabled] .btn-link:hover {
   z-index: 4; }
   @media (max-width: 767px ) {
     .landing-section-2 {
-      height: 550px; } }
+      height: 945px;
+      background-size: cover;
+      background-position: 62%;
+      background-repeat: no-repeat; } }
   @media (min-width: 768px) and (max-width:991px) {
     .landing-section-2 {
-      height: 450px; } }
+      height: 550px; } }
   .landing-section-2 .section-subtitle {
-    width: 65%; }
+    width: 80%; }
   .landing-section-2 .section-content {
     margin-top: 13%;
     color: black; }
     @media (max-width: 767px ) {
       .landing-section-2 .section-content {
         margin-top: 20%; } }
+  .landing-section-2 .section-img img {
+    width: 400px; }
+    @media (min-width: 768px) and (max-width:991px) {
+      .landing-section-2 .section-img img {
+        width: 100%; } }
+    @media (max-width: 767px ) {
+      .landing-section-2 .section-img img {
+        width: 100%; } }
 
 .landing-section-3 {
   z-index: 3; }
   @media (max-width: 767px ) {
     .landing-section-3 {
-      height: 550px; } }
+      height: 940px; } }
   @media (min-width: 768px) and (max-width:991px) {
     .landing-section-3 {
-      height: 450px; } }
+      height: 550px; } }
   .landing-section-3 .section-content {
     margin-top: 13%;
     color: black; }
@@ -1364,6 +1377,14 @@ fieldset[disabled] .btn-link:hover {
     @media (min-width: 768px) and (max-width:991px) {
       .landing-section-3 .section-content {
         margin-top: 10%; } }
+  .landing-section-3 .section-img img {
+    width: 400px; }
+    @media (min-width: 768px) and (max-width:991px) {
+      .landing-section-3 .section-img img {
+        width: 100%; } }
+    @media (max-width: 767px ) {
+      .landing-section-3 .section-img img {
+        width: 100%; } }
 
 .landing-section-4 {
   z-index: 2; }
