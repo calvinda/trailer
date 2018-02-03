@@ -15,7 +15,7 @@
     background-size: cover;
     background-color: white;
     background-position: center;
-    height: 620px;
+    height: auto;
     position: relative;
     color: white;
     @media (min-width: 1600px) {
@@ -72,19 +72,19 @@
 .landing-section-2 {
     z-index: 4;
     @media (--mobile) {
-        height: 945px;
+        height: auto;
         background-size: cover;
         background-position: 62%;
         background-repeat: no-repeat;
     }
     @media (--pad) {
-        height: 550px;
+        height: auto;
     }
     .section-subtitle {
         width: 80%;
     }
     .section-content {
-        margin-top: 13%;
+        margin: 8% auto 8%;
         color: black;
         @media (--mobile) {
             margin-top: 20%;
@@ -93,6 +93,7 @@
 
 
     .section-img{
+        margin: 8% auto 8%;
         img{
             width: 400px;
             @media (--pad) {
@@ -107,14 +108,18 @@
 
 .landing-section-3 {
     z-index: 3;
+    
     @media (--mobile) {
-        height: 940px;
+        height: auto;
+        background-size: cover;
+        background-position: 62%;
+        background-repeat: no-repeat;
     }
     @media (--pad) {
-        height: 550px;
+        height: auto;
     }
     .section-content {
-        margin-top: 13%;
+        margin-top: 8%;
         color: black;
         @media (--mobile) {
             margin-top: 18%;
@@ -125,6 +130,7 @@
     }
 
     .section-img{
+        margin: 8% auto 8%;
         img{
             width: 400px;
             @media (--pad) {
@@ -140,18 +146,35 @@
 .landing-section-4 {
     z-index: 2;
     @media (--mobile) {
-        height: 500px;
+        height: auto;
+        background-size: cover;
+        background-position: 62%;
+        background-repeat: no-repeat;
     }
     @media (--pad) {
-        height: 450px;
+        height: auto;
     }
     .section-subtitle {
         width: 80%;
     }
     .section-content {
-        margin-top: 13%;
+        margin-top: 8%;
         @media (--mobile) {
-            margin-top: 25%;
+            margin-top: 8%;
+        }
+    }
+
+
+    .section-img{
+        margin: 6% auto 8%;
+        img{
+            width: 400px;
+            @media (--pad) {
+                width: 100%;
+            }
+            @media (--mobile) {
+                width: 100%;
+            }
         }
     }
 }
@@ -201,6 +224,7 @@
 
 .landing-section-6 {
     z-index: 0;
+    min-height: 620px;
     @media (--mobile) {
         height: auto;
     }
@@ -226,7 +250,7 @@
                 height: 500px;
             }
             .section-content {
-                margin-top: 25%;
+                margin: 25% 0 10%;
                 .section-title {
                     font-size: 60px;
                     &:after {
