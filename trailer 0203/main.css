@@ -1283,7 +1283,7 @@ fieldset[disabled] .btn-link:hover {
   background-size: cover;
   background-color: white;
   background-position: center;
-  height: 620px;
+  height: auto;
   position: relative;
   color: white; }
   .landing-section.is-box-shadow {
@@ -1337,40 +1337,45 @@ fieldset[disabled] .btn-link:hover {
   z-index: 4; }
   @media (max-width: 767px ) {
     .landing-section-2 {
-      height: 945px;
+      height: auto;
       background-size: cover;
       background-position: 62%;
       background-repeat: no-repeat; } }
   @media (min-width: 768px) and (max-width:991px) {
     .landing-section-2 {
-      height: 550px; } }
+      height: auto; } }
   .landing-section-2 .section-subtitle {
     width: 80%; }
   .landing-section-2 .section-content {
-    margin-top: 13%;
+    margin: 8% auto 8%;
     color: black; }
     @media (max-width: 767px ) {
       .landing-section-2 .section-content {
         margin-top: 20%; } }
-  .landing-section-2 .section-img img {
-    width: 400px; }
-    @media (min-width: 768px) and (max-width:991px) {
-      .landing-section-2 .section-img img {
-        width: 100%; } }
-    @media (max-width: 767px ) {
-      .landing-section-2 .section-img img {
-        width: 100%; } }
+  .landing-section-2 .section-img {
+    margin: 8% auto 8%; }
+    .landing-section-2 .section-img img {
+      width: 400px; }
+      @media (min-width: 768px) and (max-width:991px) {
+        .landing-section-2 .section-img img {
+          width: 100%; } }
+      @media (max-width: 767px ) {
+        .landing-section-2 .section-img img {
+          width: 100%; } }
 
 .landing-section-3 {
   z-index: 3; }
   @media (max-width: 767px ) {
     .landing-section-3 {
-      height: 940px; } }
+      height: auto;
+      background-size: cover;
+      background-position: 62%;
+      background-repeat: no-repeat; } }
   @media (min-width: 768px) and (max-width:991px) {
     .landing-section-3 {
-      height: 550px; } }
+      height: auto; } }
   .landing-section-3 .section-content {
-    margin-top: 13%;
+    margin-top: 8%;
     color: black; }
     @media (max-width: 767px ) {
       .landing-section-3 .section-content {
@@ -1378,30 +1383,45 @@ fieldset[disabled] .btn-link:hover {
     @media (min-width: 768px) and (max-width:991px) {
       .landing-section-3 .section-content {
         margin-top: 10%; } }
-  .landing-section-3 .section-img img {
-    width: 400px; }
-    @media (min-width: 768px) and (max-width:991px) {
-      .landing-section-3 .section-img img {
-        width: 100%; } }
-    @media (max-width: 767px ) {
-      .landing-section-3 .section-img img {
-        width: 100%; } }
+  .landing-section-3 .section-img {
+    margin: 8% auto 8%; }
+    .landing-section-3 .section-img img {
+      width: 400px; }
+      @media (min-width: 768px) and (max-width:991px) {
+        .landing-section-3 .section-img img {
+          width: 100%; } }
+      @media (max-width: 767px ) {
+        .landing-section-3 .section-img img {
+          width: 100%; } }
 
 .landing-section-4 {
   z-index: 2; }
   @media (max-width: 767px ) {
     .landing-section-4 {
-      height: 500px; } }
+      height: auto;
+      background-size: cover;
+      background-position: 62%;
+      background-repeat: no-repeat; } }
   @media (min-width: 768px) and (max-width:991px) {
     .landing-section-4 {
-      height: 450px; } }
+      height: auto; } }
   .landing-section-4 .section-subtitle {
     width: 80%; }
   .landing-section-4 .section-content {
-    margin-top: 13%; }
+    margin-top: 8%; }
     @media (max-width: 767px ) {
       .landing-section-4 .section-content {
-        margin-top: 25%; } }
+        margin-top: 8%; } }
+  .landing-section-4 .section-img {
+    margin: 6% auto 8%; }
+    .landing-section-4 .section-img img {
+      width: 400px; }
+      @media (min-width: 768px) and (max-width:991px) {
+        .landing-section-4 .section-img img {
+          width: 100%; } }
+      @media (max-width: 767px ) {
+        .landing-section-4 .section-img img {
+          width: 100%; } }
 
 .landing-section-5 {
   z-index: 1;
@@ -1440,7 +1460,8 @@ fieldset[disabled] .btn-link:hover {
         margin: 20px auto 50px; } }
 
 .landing-section-6 {
-  z-index: 0; }
+  z-index: 0;
+  min-height: 620px; }
   @media (max-width: 767px ) {
     .landing-section-6 {
       height: auto; } }
@@ -1468,7 +1489,7 @@ fieldset[disabled] .btn-link:hover {
         .landing-section-6 .section-content-block .section-content-item {
           height: 500px; } }
       .landing-section-6 .section-content-block .section-content-item .section-content {
-        margin-top: 25%; }
+        margin: 25% 0 10%; }
         .landing-section-6 .section-content-block .section-content-item .section-content .section-title {
           font-size: 60px; }
           .landing-section-6 .section-content-block .section-content-item .section-content .section-title:after {
